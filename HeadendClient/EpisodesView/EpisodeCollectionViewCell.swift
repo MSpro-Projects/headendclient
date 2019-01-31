@@ -1,8 +1,9 @@
 //
 //  EpisodeCollectionViewCell.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 2019-01-01.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 import UIKit
@@ -21,13 +22,10 @@ class EpisodeCollectionViewCell : UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
-    func setVideoMetadata(metaData: VideoMetadata) {
-        self.videoMetadata = metaData
-        self.subtitleLabel.text = generateSubtitleText()
-    }
-    
-    func setVideoDetailsDelegate(delegate: VideoDetailsDelegate) {
-        self.detailsDelegate = delegate
+    func setState(delegate: VideoDetailsDelegate, metadata: VideoMetadata) {
+        detailsDelegate = delegate
+        videoMetadata = metadata
+        subtitleLabel.text = generateSubtitleText()
     }
     
     func generateSubtitleText() -> String {
@@ -36,10 +34,8 @@ class EpisodeCollectionViewCell : UICollectionViewCell {
             return subtitle
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd' 'hh:mm a"
         let tzOffset = TimeInterval(TimeZone.current.secondsFromGMT())
-        return dateFormatter.string(from: v.getStartTimeAsDate() + tzOffset)
+        return DateFormatter.localizedString(from: v.getStartTimeAsDate() + tzOffset, dateStyle: .medium, timeStyle: .short)
     }
     
     private func commonInit() {

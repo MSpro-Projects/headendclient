@@ -1,8 +1,9 @@
 //
 //  EpisodeViewController.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 2019-01-01.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 import Foundation
@@ -70,6 +71,7 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     // Collection View Methods
+    //
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 50
@@ -102,9 +104,7 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
         }
         if (collectionView == self.collectionView) {
             let cell : EpisodeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifierTitle, for: indexPath) as! EpisodeCollectionViewCell
-            cell.setVideoMetadata(metaData: episodes[indexPath.row])
-            cell.setVideoDetailsDelegate(delegate: self)
-            
+            cell.setState(delegate: self, metadata: episodes[indexPath.row])
             
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleGesture(_:)))
             recognizer.allowedPressTypes = [NSNumber(integerLiteral: UIPress.PressType.playPause.rawValue), NSNumber(integerLiteral: UIPress.PressType.select.rawValue)]

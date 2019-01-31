@@ -1,8 +1,9 @@
 //
 //  VideoPlayerViewController.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 28/1/19.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 

@@ -83,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0702FB2922027CBB00952DFE /* VideoPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				07ED1F3221FF12B400E52667 /* VideoPlayerViewController.swift */,
+				07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */,
+			);
+			path = VideoPlayerView;
+			sourceTree = "<group>";
+		};
 		073FF87421FC5D0C001BF2BE = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +119,10 @@
 				07E30AC321FDCE14000C6170 /* Tvh.swift */,
 				073FF88721FC5D0E001BF2BE /* Assets.xcassets */,
 				073FF88921FC5D0E001BF2BE /* Info.plist */,
-				079F49F92202798400575065 /* SettingsView */,
+				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
 				079F49F82202796D00575065 /* TitleView */,
 				079F49FA2202799200575065 /* EpisodesView */,
-				07ED1F3221FF12B400E52667 /* VideoPlayerViewController.swift */,
+				0702FB2922027CBB00952DFE /* VideoPlayerView */,
 			);
 			path = HeadendClient;
 			sourceTree = "<group>";
@@ -121,19 +130,10 @@
 		079F49F82202796D00575065 /* TitleView */ = {
 			isa = PBXGroup;
 			children = (
-				07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */,
 				07CB33E321FC91A90039FD8A /* TitleViewController.swift */,
+				07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */,
 			);
 			path = TitleView;
-			sourceTree = "<group>";
-		};
-		079F49F92202798400575065 /* SettingsView */ = {
-			isa = PBXGroup;
-			children = (
-				07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */,
-				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
-			);
-			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		079F49FA2202799200575065 /* EpisodesView */ = {

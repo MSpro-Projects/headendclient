@@ -1,8 +1,9 @@
 //
 //  TitleViewController.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 26/1/19.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 import Foundation
@@ -125,7 +126,7 @@ class TitleViewController : UIViewController, UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == self.collectionView) {
             let cell : TitleCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifierTitle, for: indexPath) as! TitleCollectionViewCell
-            cell.titleLabel.text = titles[indexPath.row]
+            cell.setState(text: titles[indexPath.row])
             
             return cell
         }

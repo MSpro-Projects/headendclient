@@ -1,8 +1,9 @@
 //
 //  AudioCollectionViewCell.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 2019-01-01.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 import UIKit

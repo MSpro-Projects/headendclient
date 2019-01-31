@@ -1,8 +1,9 @@
 //
 //  TitleCollectionViewCell.swift
-//  TVHeadend Client
+//  HeadendClient
 //
 //  Created by Kin Wai Koo on 26/1/19.
+//  Parts of this code were copied from http://www.brianjcoleman.com/tvos-tutorial-video-app-in-swift/.
 //
 
 import UIKit
@@ -19,6 +20,10 @@ class TitleCollectionViewCell : UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
+    func setState(text: String) {
+        titleLabel.text = text
+    }
+    
     private func commonInit() {
         // Initialization code
         self.layoutIfNeeded()
@@ -27,10 +32,10 @@ class TitleCollectionViewCell : UICollectionViewCell {
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if (self.isFocused) {
-            self.titleLabel.textColor = UIColor.black
+        if (isFocused) {
+            titleLabel.textColor = UIColor.black
         } else {
-            self.titleLabel.textColor = UIColor.lightGray
+            titleLabel.textColor = UIColor.lightGray
         }
     }
     
