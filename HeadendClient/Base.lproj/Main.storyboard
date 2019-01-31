@@ -13,7 +13,7 @@
         <!--Settings-->
         <scene sceneID="YtU-9W-FBQ">
             <objects>
-                <viewController title="Settings" id="FgS-db-EeK" userLabel="Settings" customClass="SettingsViewController" customModule="TVHeadend_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="FgS-db-EeK" userLabel="Settings" customClass="SettingsViewController" customModule="HeadendClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MDc-Hy-qq2"/>
                         <viewControllerLayoutGuide type="bottom" id="L82-we-hxp"/>
@@ -90,7 +90,7 @@
         <!--Recorded Programs-->
         <scene sceneID="x5r-4Q-ozO">
             <objects>
-                <viewController id="sT5-Pb-xaM" customClass="TitleViewController" customModule="TVHeadend_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sT5-Pb-xaM" customClass="TitleViewController" customModule="HeadendClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V76-Nk-wE5"/>
                         <viewControllerLayoutGuide type="bottom" id="3L7-4O-UNW"/>
@@ -120,7 +120,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCollectionViewCell" id="UDb-kA-J8F" customClass="TitleCollectionViewCell" customModule="TVHeadend_Client" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCollectionViewCell" id="UDb-kA-J8F" customClass="TitleCollectionViewCell" customModule="HeadendClient" customModuleProvider="target">
                                                 <rect key="frame" x="80" y="0.0" width="1760" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -192,7 +192,7 @@
         <!--Episode View Controller-->
         <scene sceneID="4zt-sq-Yme">
             <objects>
-                <viewController id="pb7-63-nsx" customClass="EpisodeViewController" customModule="TVHeadend_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pb7-63-nsx" customClass="EpisodeViewController" customModule="HeadendClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gmK-7m-UUv"/>
                         <viewControllerLayoutGuide type="bottom" id="QlE-ZY-kRV"/>
@@ -223,7 +223,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EpisodeCollectionViewCell" id="O9y-yh-coF" customClass="EpisodeCollectionViewCell" customModule="TVHeadend_Client" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EpisodeCollectionViewCell" id="O9y-yh-coF" customClass="EpisodeCollectionViewCell" customModule="HeadendClient" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="800" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -316,7 +316,7 @@
         <!--Video Player View Controller-->
         <scene sceneID="LL1-7Q-34x">
             <objects>
-                <viewController id="Bx5-mM-pmk" customClass="VideoPlayerViewController" customModule="TVHeadend_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bx5-mM-pmk" customClass="VideoPlayerViewController" customModule="HeadendClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PzO-TF-Uxu"/>
                         <viewControllerLayoutGuide type="bottom" id="tmR-up-S6c"/>
@@ -397,7 +397,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="QJq-wc-1UY" customClass="SettingsCollectionViewCell" customModule="TVHeadend_Client">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="QJq-wc-1UY" customClass="SettingsCollectionViewCell" customModule="HeadendClient">
                                                         <rect key="frame" x="50" y="0.0" width="600" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -477,7 +477,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="Kcd-0y-B2F" customClass="SettingsCollectionViewCell" customModule="TVHeadend_Client" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="Kcd-0y-B2F" customClass="SettingsCollectionViewCell" customModule="HeadendClient" customModuleProvider="target">
                                                         <rect key="frame" x="50" y="0.0" width="600" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

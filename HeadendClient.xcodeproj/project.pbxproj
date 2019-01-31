@@ -10,7 +10,6 @@
 		07103D4B21FFDBA800B67B03 /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */; };
 		0733F25F2201868C0028CE11 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733F25E2201868C0028CE11 /* SettingsViewController.swift */; };
 		073FF88121FC5D0C001BF2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FF88021FC5D0C001BF2BE /* AppDelegate.swift */; };
-		073FF88321FC5D0C001BF2BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FF88221FC5D0C001BF2BE /* ViewController.swift */; };
 		073FF88621FC5D0C001BF2BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FF88421FC5D0C001BF2BE /* Main.storyboard */; };
 		073FF88821FC5D0E001BF2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FF88721FC5D0E001BF2BE /* Assets.xcassets */; };
 		07CB33E221FC8EEC0039FD8A /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */; };
@@ -32,9 +31,8 @@
 /* Begin PBXFileReference section */
 		07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0733F25E2201868C0028CE11 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		073FF87D21FC5D0C001BF2BE /* HeadendClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeadendClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		073FF87D21FC5D0C001BF2BE /* HeadendClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadendClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FF88021FC5D0C001BF2BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		073FF88221FC5D0C001BF2BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		073FF88521FC5D0C001BF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FF88721FC5D0E001BF2BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073FF88921FC5D0E001BF2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,20 +106,43 @@
 				07ED1F3421FF12CE00E52667 /* include */,
 				07ED1F3121FF12B400E52667 /* HeadendClient-Bridging-Header.h */,
 				073FF88021FC5D0C001BF2BE /* AppDelegate.swift */,
-				073FF88221FC5D0C001BF2BE /* ViewController.swift */,
 				073FF88421FC5D0C001BF2BE /* Main.storyboard */,
+				07E30AC321FDCE14000C6170 /* Tvh.swift */,
 				073FF88721FC5D0E001BF2BE /* Assets.xcassets */,
 				073FF88921FC5D0E001BF2BE /* Info.plist */,
-				07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */,
-				07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */,
-				07CB33E321FC91A90039FD8A /* TitleViewController.swift */,
-				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
-				07E30AC321FDCE14000C6170 /* Tvh.swift */,
-				07E30AC521FDD924000C6170 /* EpisodeViewController.swift */,
-				07E30AC721FDE57E000C6170 /* EpisodeCollectionViewCell.swift */,
+				079F49F92202798400575065 /* SettingsView */,
+				079F49F82202796D00575065 /* TitleView */,
+				079F49FA2202799200575065 /* EpisodesView */,
 				07ED1F3221FF12B400E52667 /* VideoPlayerViewController.swift */,
 			);
-			path = "HeadendClient";
+			path = HeadendClient;
+			sourceTree = "<group>";
+		};
+		079F49F82202796D00575065 /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */,
+				07CB33E321FC91A90039FD8A /* TitleViewController.swift */,
+			);
+			path = TitleView;
+			sourceTree = "<group>";
+		};
+		079F49F92202798400575065 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				07103D4A21FFDBA800B67B03 /* SettingsCollectionViewCell.swift */,
+				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		079F49FA2202799200575065 /* EpisodesView */ = {
+			isa = PBXGroup;
+			children = (
+				07E30AC521FDD924000C6170 /* EpisodeViewController.swift */,
+				07E30AC721FDE57E000C6170 /* EpisodeCollectionViewCell.swift */,
+			);
+			path = EpisodesView;
 			sourceTree = "<group>";
 		};
 		07ED1F3421FF12CE00E52667 /* include */ = {
@@ -180,8 +201,8 @@
 			);
 			dependencies = (
 			);
-			name = "HeadendClient";
-			productName = "HeadendClient";
+			name = HeadendClient;
+			productName = HeadendClient;
 			productReference = 073FF87D21FC5D0C001BF2BE /* HeadendClient.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -239,7 +260,6 @@
 				07CB33E421FC91A90039FD8A /* TitleViewController.swift in Sources */,
 				0733F25F2201868C0028CE11 /* SettingsViewController.swift in Sources */,
 				07E30AC421FDCE14000C6170 /* Tvh.swift in Sources */,
-				073FF88321FC5D0C001BF2BE /* ViewController.swift in Sources */,
 				07103D4B21FFDBA800B67B03 /* SettingsCollectionViewCell.swift in Sources */,
 				07ED1F3321FF12B400E52667 /* VideoPlayerViewController.swift in Sources */,
 				07E30AC621FDD924000C6170 /* EpisodeViewController.swift in Sources */,
@@ -386,12 +406,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "HeadendClient/Info.plist";
+				INFOPLIST_FILE = HeadendClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kwkoo.HeadendClient";
+				PRODUCT_BUNDLE_IDENTIFIER = kwkoo.HeadendClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HeadendClient/HeadendClient-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -410,12 +430,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "HeadendClient/Info.plist";
+				INFOPLIST_FILE = HeadendClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kwkoo.HeadendClient";
+				PRODUCT_BUNDLE_IDENTIFIER = kwkoo.HeadendClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HeadendClient/HeadendClient-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
