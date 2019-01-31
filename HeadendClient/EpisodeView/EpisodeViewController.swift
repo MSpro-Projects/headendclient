@@ -29,6 +29,18 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
             return
         }
         navBar.topItem?.title = title
+        loadEpisodes()
+    }
+    
+    func setState(tvhserver: TvhServer, title: String) {
+        tvh = tvhserver
+        titleName = title
+    }
+    
+    func loadEpisodes() {
+        guard let title = self.titleName, let tvh = self.tvh else { return }
+        episodes = tvh.getRecordedPrograms(title: title)
+        collectionView.reloadData()
     }
     
     func showVideoDetails(data: VideoMetadata) {
@@ -39,11 +51,7 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
         timeText.append(DateFormatter.localizedString(from: data.getStopTimeAsDate() + tzOffset, dateStyle: .none, timeStyle: .short))
         self.timeLabel.text = timeText
         
-        var description = ""
-        if let tmpDesc = data.description {
-            description = tmpDesc
-        }
-        descriptionTextView.text = description
+        descriptionTextView.text = data.description ?? ""
         
         tvh?.getChannelIcon(video: data, delegate: self)
     }
@@ -106,12 +114,15 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
             let cell : EpisodeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifierTitle, for: indexPath) as! EpisodeCollectionViewCell
             cell.setState(delegate: self, metadata: episodes[indexPath.row])
             
-            let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleGesture(_:)))
-            recognizer.allowedPressTypes = [NSNumber(integerLiteral: UIPress.PressType.playPause.rawValue), NSNumber(integerLiteral: UIPress.PressType.select.rawValue)]
-            cell.addGestureRecognizer(recognizer)
-            
-            let longpress = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongPress(_:)))
-            cell.addGestureRecognizer(longpress)
+            let existingGestureRecognizers =  cell.gestureRecognizers
+            if existingGestureRecognizers == nil || existingGestureRecognizers?.count == 0 {
+                let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleGesture(_:)))
+                recognizer.allowedPressTypes = [NSNumber(integerLiteral: UIPress.PressType.playPause.rawValue), NSNumber(integerLiteral: UIPress.PressType.select.rawValue)]
+                cell.addGestureRecognizer(recognizer)
+                
+                let longpress = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongPress(_:)))
+                cell.addGestureRecognizer(longpress)
+            }
             
             return cell
         }

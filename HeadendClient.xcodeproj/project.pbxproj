@@ -121,7 +121,7 @@
 				073FF88921FC5D0E001BF2BE /* Info.plist */,
 				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
 				079F49F82202796D00575065 /* TitleView */,
-				079F49FA2202799200575065 /* EpisodesView */,
+				079F49FA2202799200575065 /* EpisodeView */,
 				0702FB2922027CBB00952DFE /* VideoPlayerView */,
 			);
 			path = HeadendClient;
@@ -136,13 +136,13 @@
 			path = TitleView;
 			sourceTree = "<group>";
 		};
-		079F49FA2202799200575065 /* EpisodesView */ = {
+		079F49FA2202799200575065 /* EpisodeView */ = {
 			isa = PBXGroup;
 			children = (
 				07E30AC521FDD924000C6170 /* EpisodeViewController.swift */,
 				07E30AC721FDE57E000C6170 /* EpisodeCollectionViewCell.swift */,
 			);
-			path = EpisodesView;
+			path = EpisodeView;
 			sourceTree = "<group>";
 		};
 		07ED1F3421FF12CE00E52667 /* include */ = {

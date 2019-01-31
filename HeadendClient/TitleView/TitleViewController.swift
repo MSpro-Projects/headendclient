@@ -68,18 +68,11 @@ class TitleViewController : UIViewController, UICollectionViewDelegateFlowLayout
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectTitle" {
-            guard let cell = sender as? TitleCollectionViewCell else {
-                return
-            }
-            let dest = segue.destination as! EpisodeViewController
-            let title = cell.titleLabel.text!
-            dest.titleName = title
+            guard let cell = sender as? TitleCollectionViewCell else { return }
+            guard let dest = segue.destination as? EpisodeViewController else { return }
             
-            guard let tvh = self.tvh else {
-                return
-            }
-            dest.tvh = tvh
-            dest.episodes = tvh.getRecordedPrograms(title: title)
+            guard let tvh = self.tvh, let title = cell.titleLabel.text else { return }
+            dest.setState(tvhserver: tvh, title: title)
         }
     }
     

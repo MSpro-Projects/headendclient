@@ -82,15 +82,17 @@ class VideoPlayerViewController: UIViewController, UICollectionViewDelegateFlowL
         guard let meta = videoMetadata else { return }
         guard let url = tvh?.getVideoURL(video: meta) else { return }
         
-        let pl = VLCMediaPlayer()
-        //pl.libraryInstance.debugLogging = true
-        //pl.libraryInstance.debugLoggingLevel = 0
-        pl.drawable = movieView
-        pl.media = VLCMedia(url: url)
+        if player == nil {
+            let pl = VLCMediaPlayer()
+            //pl.libraryInstance.debugLogging = true
+            //pl.libraryInstance.debugLoggingLevel = 0
+            pl.drawable = movieView
+            pl.delegate = self
+            player = pl
+        }
         
-        pl.play()
-        pl.delegate = self
-        player = pl
+        player!.media = VLCMedia(url: url)
+        player!.play()
     }
     
     private func exit() {
