@@ -258,6 +258,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="subtitleLabel" destination="z4S-At-tZP" id="lSx-n6-4qa"/>
+                                                    <segue destination="mS5-mu-i48" kind="show" identifier="delete" id="Sbn-96-0yg"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8a-fd-ysO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3812" y="-3102"/>
+            <point key="canvasLocation" x="3758" y="-3263"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="LL1-7Q-34x">
@@ -583,6 +584,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zne-57-Y4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6394" y="-3102"/>
+        </scene>
+        <!--Delete Recording-->
+        <scene sceneID="QIb-Wq-UZf">
+            <objects>
+                <viewController id="mS5-mu-i48" userLabel="Delete Recording" customClass="DeleteRecordingViewController" customModule="HeadendClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WY8-tW-H7U"/>
+                        <viewControllerLayoutGuide type="bottom" id="RYI-kp-3re"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SQW-2S-iTA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wu-yW-bpc">
+                                <rect key="frame" x="90" y="160" width="1740" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-VF-DdQ" userLabel="Title">
+                                <rect key="frame" x="490" y="401" width="1000" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="RvZ-Q5-CUE"/>
+                                    <constraint firstAttribute="width" constant="1000" id="iEU-gX-CUC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-U3-ywe" userLabel="Subtitle">
+                                <rect key="frame" x="490" y="497" width="1000" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Mvf-g4-NKn"/>
+                                    <constraint firstAttribute="width" constant="1000" id="jZh-cI-ev0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD/MM 12:00 PM - DD/MM 1:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlf-YB-DkC" userLabel="Time">
+                                <rect key="frame" x="490" y="593" width="1000" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="PHA-Lv-HPI"/>
+                                    <constraint firstAttribute="width" constant="1000" id="xVJ-3G-0qX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-lh-gOK">
+                                <rect key="frame" x="1272" y="925" width="218" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="Ba3-LV-DtV"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmDeletion:" destination="mS5-mu-i48" eventType="primaryActionTriggered" id="jPg-iB-Pod"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TCS-CX-h7t">
+                                <rect key="frame" x="1172" y="943" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cns-vU-RRO"/>
+                                    <constraint firstAttribute="width" constant="50" id="v1l-jl-mdY"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0e-Ku-bEE">
+                                <rect key="frame" x="1272" y="789" width="218" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="T2O-kh-kkO"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="mS5-mu-i48" eventType="primaryActionTriggered" id="iDe-lF-cwy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="I7q-lh-gOK" firstAttribute="leading" secondItem="TCS-CX-h7t" secondAttribute="trailing" constant="50" id="043-NY-naU"/>
+                            <constraint firstItem="gc6-U3-ywe" firstAttribute="leading" secondItem="jJg-VF-DdQ" secondAttribute="leading" id="6zC-5x-9Su"/>
+                            <constraint firstItem="nlf-YB-DkC" firstAttribute="top" secondItem="gc6-U3-ywe" secondAttribute="bottom" constant="50" id="AjN-0y-VUX"/>
+                            <constraint firstItem="9BE-MT-dmp" firstAttribute="trailing" secondItem="0wu-yW-bpc" secondAttribute="trailing" id="Lzu-3I-eLF"/>
+                            <constraint firstItem="gc6-U3-ywe" firstAttribute="top" secondItem="jJg-VF-DdQ" secondAttribute="bottom" constant="50" id="NW0-vL-IGW"/>
+                            <constraint firstItem="0wu-yW-bpc" firstAttribute="leading" secondItem="9BE-MT-dmp" secondAttribute="leading" id="Nda-gR-lCp"/>
+                            <constraint firstItem="I7q-lh-gOK" firstAttribute="top" secondItem="Q0e-Ku-bEE" secondAttribute="bottom" constant="50" id="Qr7-Dz-gmk"/>
+                            <constraint firstItem="I7q-lh-gOK" firstAttribute="trailing" secondItem="jJg-VF-DdQ" secondAttribute="trailing" id="X1b-M0-waf"/>
+                            <constraint firstItem="jJg-VF-DdQ" firstAttribute="top" secondItem="0wu-yW-bpc" secondAttribute="bottom" constant="150" id="cei-ii-SK6"/>
+                            <constraint firstItem="nlf-YB-DkC" firstAttribute="leading" secondItem="jJg-VF-DdQ" secondAttribute="leading" id="eUq-op-tTk"/>
+                            <constraint firstItem="Q0e-Ku-bEE" firstAttribute="top" secondItem="nlf-YB-DkC" secondAttribute="bottom" constant="150" id="eVs-Yz-gWT"/>
+                            <constraint firstItem="Q0e-Ku-bEE" firstAttribute="trailing" secondItem="jJg-VF-DdQ" secondAttribute="trailing" id="hkm-4M-VH5"/>
+                            <constraint firstItem="0wu-yW-bpc" firstAttribute="top" secondItem="WY8-tW-H7U" secondAttribute="bottom" constant="100" id="iht-Ud-jZN"/>
+                            <constraint firstItem="I7q-lh-gOK" firstAttribute="centerY" secondItem="TCS-CX-h7t" secondAttribute="centerY" id="jTO-19-8Bl"/>
+                            <constraint firstItem="jJg-VF-DdQ" firstAttribute="leading" secondItem="9BE-MT-dmp" secondAttribute="leading" constant="400" id="yOf-mU-LBE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9BE-MT-dmp"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="Q0e-Ku-bEE" id="S8d-s9-y6o"/>
+                        <outlet property="confirmButton" destination="I7q-lh-gOK" id="6F5-Re-pWf"/>
+                        <outlet property="spinner" destination="TCS-CX-h7t" id="wZP-3F-n37"/>
+                        <outlet property="subtitleLabel" destination="gc6-U3-ywe" id="bJP-EE-3i2"/>
+                        <outlet property="timeLabel" destination="nlf-YB-DkC" id="DK8-Ig-fVb"/>
+                        <outlet property="titleLabel" destination="jJg-VF-DdQ" id="7hI-mI-AJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="od0-GS-kjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6458" y="-1502"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nGc-I5-fPG">

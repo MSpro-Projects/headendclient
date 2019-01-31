@@ -11,7 +11,7 @@ import UIKit
 
 // todo: implement delete
 
-class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate, VideoDetailsDelegate, ChannelIconDisplay {
+class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate, VideoDetailsDelegate, ChannelIconDisplay, DeleteRecordingDelegate {
     @IBOutlet weak var navBar : UINavigationBar!
     @IBOutlet weak var scrollView : UIScrollView!
     @IBOutlet weak var collectionView : UICollectionView!
@@ -60,6 +60,12 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
         self.channelImageView.image = UIImage(data: data)
     }
     
+    func deleteRecordingSuccessful(metadata: VideoMetadata) {
+        // todo: update cached data appropriately
+        // todo: if the number of episodes == 0, then we need to return to the title view
+        print("delete recording successful")
+    }
+    
     @objc func handleGesture(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "play", sender: self)
     }
@@ -68,14 +74,21 @@ class EpisodeViewController : UIViewController, UICollectionViewDelegateFlowLayo
         if sender.state != .began {
             return
         }
-        // todo: process delete here
+        performSegue(withIdentifier: "delete", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "play" { return }
-        guard let tvh = self.tvh, let focusedCell = UIScreen.main.focusedView as? EpisodeCollectionViewCell, let meta = focusedCell.videoMetadata, let dest = segue.destination as? VideoPlayerViewController else { return }
-        dest.tvh = tvh
-        dest.videoMetadata = meta
+        if segue.identifier == "play" {
+            guard let tvh = self.tvh, let focusedCell = UIScreen.main.focusedView as? EpisodeCollectionViewCell, let meta = focusedCell.videoMetadata, let dest = segue.destination as? VideoPlayerViewController else { return }
+            dest.setState(tvhserver: tvh, metadata: meta)
+            return
+        }
+        if segue.identifier == "delete" {
+            guard let tvh = self.tvh, let focusedCell = UIScreen.main.focusedView as? EpisodeCollectionViewCell, let meta = focusedCell.videoMetadata, let dest = segue.destination as? DeleteRecordingViewController else { return }
+            dest.setState(deleteDelegate: self, tvhserver: tvh, videometadata: meta)
+            return
+        }
+        
     }
     
     // Collection View Methods

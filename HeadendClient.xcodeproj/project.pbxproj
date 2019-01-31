@@ -12,6 +12,7 @@
 		073FF88121FC5D0C001BF2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FF88021FC5D0C001BF2BE /* AppDelegate.swift */; };
 		073FF88621FC5D0C001BF2BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FF88421FC5D0C001BF2BE /* Main.storyboard */; };
 		073FF88821FC5D0E001BF2BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FF88721FC5D0E001BF2BE /* Assets.xcassets */; };
+		0770D9D62202BEE6001F645F /* DeleteRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770D9D52202BEE6001F645F /* DeleteRecordingViewController.swift */; };
 		07CB33E221FC8EEC0039FD8A /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */; };
 		07CB33E421FC91A90039FD8A /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB33E321FC91A90039FD8A /* TitleViewController.swift */; };
 		07E30AC421FDCE14000C6170 /* Tvh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E30AC321FDCE14000C6170 /* Tvh.swift */; };
@@ -36,6 +37,7 @@
 		073FF88521FC5D0C001BF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FF88721FC5D0E001BF2BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073FF88921FC5D0E001BF2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0770D9D52202BEE6001F645F /* DeleteRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRecordingViewController.swift; sourceTree = "<group>"; };
 		07CB33E121FC8EEC0039FD8A /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		07CB33E321FC91A90039FD8A /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		07E30AC321FDCE14000C6170 /* Tvh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tvh.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				073FF88721FC5D0E001BF2BE /* Assets.xcassets */,
 				073FF88921FC5D0E001BF2BE /* Info.plist */,
 				0733F25E2201868C0028CE11 /* SettingsViewController.swift */,
+				0770D9D52202BEE6001F645F /* DeleteRecordingViewController.swift */,
 				079F49F82202796D00575065 /* TitleView */,
 				079F49FA2202799200575065 /* EpisodeView */,
 				0702FB2922027CBB00952DFE /* VideoPlayerView */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CB33E221FC8EEC0039FD8A /* TitleCollectionViewCell.swift in Sources */,
+				0770D9D62202BEE6001F645F /* DeleteRecordingViewController.swift in Sources */,
 				07E30AC821FDE57E000C6170 /* EpisodeCollectionViewCell.swift in Sources */,
 				07CB33E421FC91A90039FD8A /* TitleViewController.swift in Sources */,
 				0733F25F2201868C0028CE11 /* SettingsViewController.swift in Sources */,

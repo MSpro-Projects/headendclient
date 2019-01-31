@@ -78,6 +78,11 @@ class VideoPlayerViewController: UIViewController, UICollectionViewDelegateFlowL
         return movieView
     }
     
+    func setState(tvhserver: TvhServer, metadata: VideoMetadata) {
+        tvh = tvhserver
+        videoMetadata = metadata
+    }
+    
     func completeInitialization() {
         guard let meta = videoMetadata else { return }
         guard let url = tvh?.getVideoURL(video: meta) else { return }
