@@ -64,6 +64,17 @@
                                     <action selector="portChanged:" destination="FgS-db-EeK" eventType="editingDidEnd" id="ZuU-ee-hUE"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XP-6K-o4R">
+                                <rect key="frame" x="1000" y="190" width="700" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="700" id="VEB-jd-Ks6"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Refresh Server Data "/>
+                                <connections>
+                                    <action selector="refreshServerData:" destination="FgS-db-EeK" eventType="primaryActionTriggered" id="FWC-N4-jvh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="zdS-Vo-6xL" firstAttribute="leading" secondItem="AJD-Y9-oDg" secondAttribute="leading" id="1Mh-In-8uL"/>
@@ -71,7 +82,9 @@
                             <constraint firstItem="Q0a-3G-3vL" firstAttribute="leading" secondItem="tQO-Kx-mqa" secondAttribute="leading" constant="100" id="8Js-IP-1ez"/>
                             <constraint firstItem="HuC-Mk-FUh" firstAttribute="top" secondItem="zdS-Vo-6xL" secondAttribute="bottom" constant="100" id="C9l-FX-Nx8"/>
                             <constraint firstItem="AJD-Y9-oDg" firstAttribute="top" secondItem="MDc-Hy-qq2" secondAttribute="bottom" constant="150" id="EjM-Mx-GvK"/>
+                            <constraint firstItem="7XP-6K-o4R" firstAttribute="centerY" secondItem="AJD-Y9-oDg" secondAttribute="centerY" id="IqH-rv-oMs"/>
                             <constraint firstItem="AJD-Y9-oDg" firstAttribute="leading" secondItem="tQO-Kx-mqa" secondAttribute="leading" constant="100" id="M3R-1a-Qje"/>
+                            <constraint firstItem="7XP-6K-o4R" firstAttribute="leading" secondItem="aaU-fj-vCu" secondAttribute="leading" constant="1000" id="PxL-6T-Rmd"/>
                             <constraint firstItem="HuC-Mk-FUh" firstAttribute="leading" secondItem="tQO-Kx-mqa" secondAttribute="leading" constant="100" id="ntD-fM-fsP"/>
                             <constraint firstItem="Q0a-3G-3vL" firstAttribute="top" secondItem="HuC-Mk-FUh" secondAttribute="bottom" constant="50" id="ynJ-a5-Xll"/>
                         </constraints>
@@ -81,6 +94,7 @@
                     <connections>
                         <outlet property="address" destination="zdS-Vo-6xL" id="yYT-3Q-dhL"/>
                         <outlet property="port" destination="Q0a-3G-3vL" id="kHn-UM-zcm"/>
+                        <outlet property="refreshButton" destination="7XP-6K-o4R" id="TXN-vC-IWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUQ-VQ-5ib" userLabel="First Responder" sceneMemberID="firstResponder"/>
